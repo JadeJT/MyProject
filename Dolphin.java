@@ -48,11 +48,16 @@ public class Dolphin {
 							System.out.println("splash");break;
 						}
 					}
+					
 				}
+				
 			}
 			System.out.println("END");
+			
 		} else {
 			System.out.println("Error");
 		}
+		
 	}
+	
 }
