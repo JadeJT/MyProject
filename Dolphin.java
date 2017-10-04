@@ -8,7 +8,8 @@ public class Dolphin {
 		int input = 0;
 		int currentRound = 0;
 		int oldRound = 0;
-		int dolphin = 1, jump = 1;
+		int dolphin = 1;
+		int jump = 1;
 		Scanner number = new Scanner(System.in);
 		
 		System.out.print("Input testcase : ");
