@@ -6,8 +6,8 @@ public class Dolphin {
 		
 		int testCase = 0;
 		int input = 0;
-		int round = 0;
-		int old = 0;
+		int currentRound = 0;
+		int oldRound = 0;
 		int dolphin = 1, jump = 1;
 		Scanner number = new Scanner(System.in);
 		
@@ -22,25 +22,25 @@ public class Dolphin {
 					i = testCase + 1;
 					continue;
 				}
-				old = 0;
-				round = 0;
+				oldRound = 0;
+				currentRound = 0;
 				dolphin = 1; 
 				jump = 1;
 				
 				for(int j = 1 ; j <= 2000000000 ; j++){
-					old = round;
-					round += j*3;
+					oldRound = currentRound;
+					currentRound += j*3;
 				
-					if((input <= round) && (input <= 2000000000)){
-						if((input - old ) <= dolphin*j){
-							if(old != 0){
+					if((input <= currentRound) && (input <= 2000000000)){
+						if((input - oldRound) <= dolphin * j){
+							if(oldRound != 0){
 								System.out.println(j + " dolphins");break;
 							}else{
 								System.out.println(j + " dolphin");break;
 							}
-						}else if((input - old) <= (dolphin + jump) * j){
-							if(old != 0){
-								System.out.println(j + " jump");break;
+						}else if((input - oldRound) <= (dolphin + jump) * j){
+							if(oldRound != 0){
+								System.out.println(j + " jumps");break;
 							}else{
 								System.out.println(j + " jump");break;
 							}
@@ -49,6 +49,7 @@ public class Dolphin {
 						}
 					}
 				}
+				System.out.println("END");
 			}
 		} else {
 			System.out.println("Error");
